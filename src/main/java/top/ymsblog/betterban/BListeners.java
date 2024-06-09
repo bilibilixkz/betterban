@@ -20,8 +20,8 @@ public class BListeners implements Listener {
         String playerip = Objects.requireNonNull(event.getPlayer().getAddress()).getAddress().getHostAddress();
         List<String> rebanlist = MainPlugin.getConfig().getStringList("rebanip");
         List<String> whiteuser = MainPlugin.getConfig().getStringList("whiteuser");
-        if(whiteuser.contains(event.getPlayer().getName())||!MainPlugin.getConfig().getBoolean("run")){
-            System.out.println("The user is in whitelist or the plugin not run");
+        if(whiteuser.contains(event.getPlayer().getName())||MainPlugin.getConfig().getBoolean("enable")){
+            System.out.println("The user is in whitelist");
             return;
         }
         for(String str : rebanlist){

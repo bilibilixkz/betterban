@@ -6,7 +6,7 @@
 ## 使用
 ### 配置文件
 ```yaml
-run: false
+enable: false
 # 总开关
 rebanip:
   - "127.0.0.1$"
